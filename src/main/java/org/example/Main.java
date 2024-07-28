@@ -160,63 +160,7 @@ public class Main {
             entityManager.persist(pizzaHawaina);
             entityManager.persist(lomoCompleto);
 
-           /*
 
-            // Mostrar todas las categorías
-            System.out.println("Todas las categorías:");
-            List<Categoria> todasLasCategorias = categoriaRepository.findAll();
-            todasLasCategorias.forEach(System.out::println);
-
-            // Mostrar todos los artículos insumos
-            System.out.println("Todos los artículos insumos:");
-            List<ArticuloInsumo> todosLosArticulosInsumos = articuloInsumoRepository.findAll();
-            todosLosArticulosInsumos.forEach(System.out::println);
-
-            // Mostrar todos los artículos manufacturados
-            System.out.println("Todos los artículos manufacturados:");
-            List<ArticuloManufacturado> todosLosArticulosManufacturados = articuloManufacturadoRepository.findAll();
-            todosLosArticulosManufacturados.forEach(System.out::println);
-
-            // Buscar un artículo manufacturado por ID
-            Optional<ArticuloManufacturado> articuloEncontrado = articuloManufacturadoRepository.findById(1L);
-            articuloEncontrado.ifPresent(a -> System.out.println("Artículo manufacturado encontrado por ID 1: " + a));
-
-            // Actualizar un artículo manufacturado por ID
-            ArticuloManufacturado pizzaHawainaActualizada = ArticuloManufacturado.builder()
-
-                    .id(1L)
-                    .denominacion("Pizza Hawaina Actualizada")
-                    .precioVenta(14.0)
-                    .descripcion("Pizza con piña, jamón y queso extra")
-                    .tiempoEstimadoMinutos(22)
-                    .preparacion("Hornear por 22 minutos")
-                    .categoria(pizzas)
-                    .unidadMedida(kg)
-                    .imagenes(new HashSet<>(Set.of(img1, img2, img3)))
-                    .articuloManufacturadoDetalles(new HashSet<>(Set.of(detallePizzaHawaina1, detallePizzaHawaina2, detallePizzaHawaina3)))
-                    .build();
-
-            articuloManufacturadoRepository.genericUpdate(1L, pizzaHawainaActualizada);
-            Optional<ArticuloManufacturado> articuloVerificado = articuloManufacturadoRepository.findById(1L);
-            articuloVerificado.ifPresent(a -> System.out.println("Artículo manufacturado después de la actualización: " + a));
-
-            // Eliminar un artículo manufacturado por ID
-            articuloManufacturadoRepository.genericDelete(1L);
-            Optional<ArticuloManufacturado> articuloEliminado = articuloManufacturadoRepository.findById(1L);
-            if (articuloEliminado.isEmpty()) {
-                System.out.println("El artículo manufacturado con ID 1 ha sido eliminado.");
-            }
-
-            // Mostrar todos los artículos manufacturados restantes
-            System.out.println("Todos los artículos manufacturados restantes:");
-            todosLosArticulosManufacturados = articuloManufacturadoRepository.findAll();
-            todosLosArticulosManufacturados.forEach(System.out::println);
-
-
-*/
-
-
-            //        entityManager.persist(person);
 
             entityManager.getTransaction().commit();
 
